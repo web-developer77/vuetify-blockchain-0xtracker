@@ -1,0 +1,35 @@
+.card-shadow {
+  box-shadow: $card-box-shadow !important;
+}
+
+.card-stats-padding {
+  padding: $card-stats-padding;
+}
+
+.card-padding {
+  padding: $card-padding !important;
+}
+
+.card-header-padding {
+  padding: $card-header-padding;
+}
+
+.card-border-bottom {
+  border-bottom: 1px solid rgba($black, .05);
+}
+
+.card-border {
+  box-shadow: $card-border-with-box-shadow !important;
+}
+
+.card-picker-custom {
+  .v-btn--icon .v-icon {
+    font-size: $card-datepicker-icon-size;
+    width: $card-datepicker-icon-size;
+    height: $card-datepicker-icon-size;
+  }
+
+  .v-date-picker-header__value button {
+    color: $body-color !important;
+  }
+}

@@ -1,0 +1,125 @@
+.v-navigation-drawer {
+  box-shadow: $v-navigation-drawer-box-shadow;
+
+  &.v-navigation-drawer--open-on-hover .d-none-mini,
+  &.v-navigation-drawer--is-mouseover .v-list-item-mini {
+    opacity: 0;
+  }
+
+  &.v-navigation-drawer--is-mouseover .d-none-mini, {
+    opacity: 1;
+  }
+  
+}
+
+.v-navigation-drawer__content {
+  & > .v-list-item {
+    height: $v-navigation-drawer-brand-height;
+  }
+
+  .v-list-item-mini,
+  .v-application--is-ltr & .v-list-item__action:first-child,
+  .v-application--is-ltr & .v-list-item__icon:first-child {
+    margin-right: $v-list-item-icon-mr;
+  }
+
+  .v-list-item,
+  .v-list-item--dense {
+    min-height: auto;
+  }
+
+  .v-list-group__header__append-icon .v-icon {
+    color: $gray-400;
+  }
+
+  .v-list-group--active .v-list-group__header__append-icon .v-icon {
+    color: map-get($theme-colors, 'primary');
+  }
+
+  .v-list-group__items .v-list-item__title {
+    font-size: $v-list-item-mini-font-size;
+  }
+
+  .v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
+    color: $v-list-item-title-color !important;
+
+    &:focus,
+    &:hover {
+      color: $v-list-item-title-hover-color !important; 
+    }
+  }
+
+  .v-list-item::before {
+    display: none;
+  }
+
+  .item-active {
+    background-color: map-get($theme-colors, 'primary');
+    color: #FFFFFF;
+  }
+} 
+
+.v-navigation-drawer-brand {
+  .v-navigation-drawer--is-mouseover & {
+    display: block !important;
+  }
+
+  .v-navigation-drawer--mini-variant & {
+    display: none !important;
+  }
+}
+
+.v-list-item-mini {
+  font-size: $v-list-item-mini-font-size;
+}
+
+.v-icon-drawer,
+.v-list-item-mini {
+  min-width: $v-icon-drawer-min-width;
+}
+
+@media screen and (min-width: 1264px) {
+  .v-main:not(.auth-pages) {
+    padding-left: $v-main-margin-left !important;
+  }
+}
+
+
+.drawer-mini {
+  .v-main {
+    padding-left: $v-main-mini-margin-left !important;
+  }
+}
+
+.drawer-state {
+  width: 100%;
+  height: 100%;
+  width: calc(100% - #{$v-main-margin-left});
+  right: 0;
+  z-index: 9999;
+}
+
+// Sidenav toggler
+
+.drawer-toggler-line {
+  position: relative;
+  display: block;
+  height: $drawer-toggler-line-height;
+  background-color: $drawer-toggler-line-bg;
+
+  &:not(:last-child) {
+    margin-bottom: $drawer-toggler-line-mb;
+  }
+}
+
+.drawer-toggler-line,
+.drawer-toggler-inner {
+  width: $drawer-toggler-line-width;
+  transition: $transition-general;
+}
+
+.drawer-toggler:not(.active) .drawer-toggler-line:first-child,
+.drawer-toggler:not(.active) .drawer-toggler-line:last-child {
+  width: $drawer-toggler-line-active-width;
+  transform: translateX($drawer-toggler-line-active-tranform);
+}

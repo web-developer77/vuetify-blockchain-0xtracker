@@ -1,0 +1,8 @@
+.active-breadcrumb:not(.breadcrumb-alternative) {
+  color: $gray-300;
+}
+
+.breadcrumb-alternative .active-breadcrumb {
+  color: $gray-600;
+  opacity: 1;
+}

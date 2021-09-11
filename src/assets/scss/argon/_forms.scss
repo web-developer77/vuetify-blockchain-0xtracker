@@ -1,0 +1,165 @@
+// Default
+$light-placeholder-lg-false: false;
+$light-placeholder-sm-false: false;
+
+// LG
+$light-lg-placeholder-lg: true;
+$light-lg-placeholder-sm: false;
+
+// SM
+$light-sm-placeholder-lg: false;
+$light-sm-placeholder-sm: true;
+
+$map: (
+  'dark': (rgba($black, .6), $light-placeholder-lg-false, $light-placeholder-sm-false),
+  'white': (rgba($white, .8), $light-placeholder-lg-false, $light-placeholder-sm-false),
+  'search-dark': (rgba($white, .6), $light-placeholder-lg-false, $light-placeholder-sm-false),
+  'lighter': ($gray-500, $light-placeholder-lg-false, $light-placeholder-sm-false),
+  'light': ($gray-600, $light-placeholder-lg-false, $light-placeholder-sm-false),
+  'light-lg': ($gray-600, $light-lg-placeholder-lg, $light-lg-placeholder-sm),
+  'light-sm': ($gray-600, $light-sm-placeholder-lg, $light-sm-placeholder-sm),
+);
+
+@each $key, $value in $map {
+  .placeholder-#{$key} textarea,
+  .placeholder-#{$key} input {
+    @include placeholder($value...);
+  }
+}
+
+.text-color-search-dark input {
+  color: rgba($white, .5) !important;
+}
+
+.text-color-light input {
+  color: $gray-600 !important;
+}
+
+.text-color-white input {
+  color: $white !important;
+}
+
+.font-size-input {
+  textarea,
+  &.v-text-field input {
+    font-size: $input-font-size;
+  }
+}
+
+.font-size-input-lg {
+  textarea,
+  &.v-text-field input {
+    font-size: $font-size-base;
+  }
+}
+
+.font-size-input-sm {
+  textarea,
+  &.v-text-field input {
+    font-size: $font-size-base - .125;
+  }
+}
+
+.text-light-input input,
+.text-light-input textarea {
+  color: $gray-600 !important;
+}
+
+
+.navbar-search {
+  &:not(.navbar-search-dark) .v-input--is-focused .v-input__slot {
+    background-color: $white !important;
+  }
+
+  &.navbar-search-dark .v-input--is-focused .v-input__slot {
+    background-color: $input-dark-bg !important;
+  }
+} 
+
+@media screen and (min-width: 600px) {
+  .navbar-search {
+    .v-input {
+      width: $search-input-width;
+      transition: $transition-cubic-bezier;
+    }
+
+    .v-input.v-input--is-focused {
+      width: $search-input-focus-width;
+    }
+  }
+}
+
+.input-icon.v-text-field {
+  .v-input__slot {
+    padding: 0 $input-icon-padding-x + .25;
+  }
+}
+
+.input-alternative {
+  .v-input__slot {
+    box-shadow: $input-alternative-box-shadow;
+  }
+}
+
+.input-icon.v-text-field {
+  .v-input__prepend-inner {
+    padding-right: $input-icon-padding-x;
+  }
+
+  .v-input__append-inner {
+    padding-left: $input-icon-padding-x;
+  }
+}
+
+.input-style {
+  .v-input__slot {
+    border: 1px solid $gray-300;
+
+    &:hover {
+      background: transparent !important;
+    }
+  }
+
+  &.v-input--is-focused .v-input__slot {
+    border-color: map-get($theme-colors, 'primary');
+    outline: 0;
+    background-color: $white;
+    box-shadow: $input-focused-box-shadow;
+  }
+
+  &.input-height-sm.v-text-field--filled>.v-input__control>.v-input__slot,
+  &.input-height-sm.v-text-field--full-width>.v-input__control>.v-input__slot,
+  &.input-height-sm.v-text-field--outlined>.v-input__control>.v-input__slot {
+    min-height: 31px;
+  }
+
+  .v-file-input__text,
+  .v-file-input__text.v-file-input__text--placeholder {
+    color: $gray-600;
+  }
+}
+
+.input-focused-alternative {
+  &.v-input--is-focused .v-input__slot {
+    box-shadow: $input-alternative-focused-box-shadow;
+  }
+}
+
+.input-focused {
+  &.v-input--is-focused .v-input__slot {
+    box-shadow: $input-focused-box-shadow;
+  }
+}
+
+.error--text {
+  textarea,
+  input {
+    @include placeholder(map-get($theme-colors, 'danger') , $light-placeholder-lg-false, $light-placeholder-sm-false);
+  }
+
+  .v-messages__message,
+  .checkbox-validation {
+    color: map-get($theme-colors, 'danger') !important;
+  }
+}
+

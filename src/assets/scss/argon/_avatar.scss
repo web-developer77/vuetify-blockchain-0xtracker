@@ -1,0 +1,29 @@
+.avatar-group {
+  .v-avatar:not(:nth-of-type(0)) {
+    margin-left: -$avatar-group-ml;
+  }
+
+  .v-avatar {
+    border: 2px solid $white;
+    z-index: 2;
+
+    &:hover {
+      z-index: 3;
+    }
+  }
+}
+
+.avatar-absolute {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translate(0, -50%) scale(1);
+  border: 3px solid $white;
+  transition: $transition-general;
+
+  &:hover {
+    transform: translate(0, -50%) scale(1.03);
+  }
+}

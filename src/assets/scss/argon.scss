@@ -1,0 +1,41 @@
+// Variables
+@import "argon/variables";
+
+// Mixins
+@import "argon/mixins/placeholder";
+@import "argon/mixins/background";
+
+// Utilities
+@import "argon/utilities";
+
+// Nucleo Icons
+// @import "argon/nucleo-svg";
+@import "argon/nucleo";
+
+// Components
+@import "argon/drawer";
+@import "argon/misc";
+@import "argon/forms";
+@import "argon/buttons";
+@import "argon/app-bar";
+@import "argon/breadcrumbs";
+@import "argon/card";
+@import "argon/typography";
+@import "argon/checkbox";
+@import "argon/progress";
+@import "argon/avatar";
+@import "argon/media";
+@import "argon/table";
+@import "argon/header";
+@import "argon/separators";
+@import "argon/alerts";
+@import "argon/timeline";
+@import "argon/switch";
+@import "argon/pagination";
+@import "argon/select";
+
+// Vendors
+@import "argon/vendors/sweetalert2";
+@import "argon/vendors/fullcalendar";
+@import "argon/vendors/quill";
+@import "argon/vendors/dropzone";

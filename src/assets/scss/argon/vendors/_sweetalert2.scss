@@ -1,0 +1,45 @@
+//
+// Sweet alert 2
+// Sweet alert 2 plugin overrides
+//
+
+
+.swal2-popup {
+  font-family: $body-font-family !important;
+  padding: $swal2-padding;
+
+  #swal2-title {
+    font-size: $swal2-title-font-size;
+  }
+
+  #swal2-content {
+    font-size: $swal2-content-font-size;
+  }
+
+  #swal2-image {
+    max-width: 200px;
+  }
+  
+  @each $name, $val in $theme-colors {
+    .sweet-btn-#{$name} {
+      background-color: map-get($theme-colors, $name);
+    }
+  }
+
+   [class*="sweet-btn-"] {
+     outline: none;
+     padding: .625rem 1.25rem;
+     border-radius: map-get($rounded, 'sm');
+     font-weight: 600;
+     color: $white;
+     font-size: map-get($headings, 'body-2', 'size');
+     box-shadow: $btn-shadow;
+     transition: $transition-general;
+
+     &:focus,
+     &:hover {
+       box-shadow: $btn-shadow-hover !important;
+       transform: translateY($btn-hover-raised);
+     }
+   }
+}

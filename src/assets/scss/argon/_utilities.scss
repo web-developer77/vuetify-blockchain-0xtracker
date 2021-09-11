@@ -1,0 +1,62 @@
+@each $name,$val in $width {
+  .w-#{$name} {
+    width: $val !important;
+  }
+}
+
+@each $name,$val in $theme-colors {
+  .text-#{$name} {
+    color: $val !important;
+  }
+
+  .bg-#{$name} {
+    background-color: $val !important;
+  }
+}
+
+@each $name,$val in $colors-simple {
+  .text-#{$name} {
+    color: $val !important;
+  }
+}
+
+@each $name,$val in $opacity {
+  .opacity-#{$name} {
+    opacity: $val !important;
+  }
+}
+
+@each $name,$val in $theme-colors {
+  .badge-#{$name} {
+    @if $name == 'info' {
+      color: darken($val, 8%) !important;
+    } @else if $name == 'success' {
+      color: darken($val, 11%) !important;
+    } @else {
+      color: $val !important;
+    } 
+  }
+}
+
+@each $name,$val in $letter-spacing {
+  .v-application .ls-#{$name} {
+    letter-spacing: $val !important;
+  }
+}
+
+@each $name,$val in $bg-gradient-variant {
+  .bg-gradient-#{$name} {
+    @include bg-gradient-variant(nth($val, 1), nth($val, -1));
+  }
+}
+
+@each $name,$val in $colors-simple {
+  .bg-#{$name} {
+    background-color: $val !important;
+  }
+}
+
+.mb-30 {
+  margin-bottom: $mb-30 !important;
+}
+

@@ -1,0 +1,3 @@
+@mixin bg-gradient-variant($val1, $val2) {
+  background: linear-gradient(87deg, $val1 0, $val2 100%) !important;
+}

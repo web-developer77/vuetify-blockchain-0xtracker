@@ -1,0 +1,276 @@
+//
+// Full Calendar
+//
+
+.fc-header-toolbar {
+  display: none;
+}
+
+.fc-scroller {
+  height: auto !important;
+}
+
+.card-calendar-body {
+  .fc th {
+    text-align: left !important;
+  }
+
+  .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+    min-height: 5em;
+  }
+
+  table {
+    border-left: 0;
+  }
+
+  .fc-daygrid-day-number {
+    font-size: $font-size-base - .125;
+    padding: .5rem 1rem !important;
+  }
+
+  .fc .fc-col-header-cell-cushion {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+.widget-calendar {
+
+  .fc-theme-standard td,
+  .fc-theme-standard th,
+  .fc-theme-standard .fc-scrollgrid {
+    border: 0;
+  }
+}
+
+
+.fc {
+  th {
+    padding: .75rem 1rem - .5 !important;
+    font-size: map-get($headings, 'caption','size');
+    font-weight: $font-weight-bold;
+    color: $gray-600;
+    text-transform: uppercase;
+  }
+
+  .fc-daygrid-day-number {
+    width: 100%;
+  }
+
+  .fc-daygrid-day.fc-day-today {
+    background-color: transparent !important;
+    color: theme-color('warning');
+  }
+
+  div.fc-row {
+    margin-right: 0;
+    border: 0;
+  }
+
+  button {
+    .fc-icon {
+      top: -5px;
+    }
+  }
+}
+
+.fc-unthemed {
+  td.fc-today {
+    background-color: transparent;
+
+    span {
+      color: theme-color('warning');
+    }
+  }
+}
+
+.fc .fc-daygrid-event {
+  color: $white;
+}
+
+.fc-h-event {
+  padding: .4rem .5rem;
+  color: $white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: $font-weight-bold;
+  border: 0 !important;
+
+  &.fc-daygrid-event {
+    margin: 1px 9px !important;
+    font-size: $font-size-base - .250 !important;
+  }
+
+  .fc-event-title {
+    color: $white;
+    text-overflow: ellipsis;
+  }
+
+  .fc-event-time {
+    float: left;
+    padding: 2px 6px;
+    margin: 0 0 0 -1px;
+    color: $white;
+  }
+
+  .fc-daygrid-event-dot {
+    display: none;
+  }
+}
+
+
+.fc-view {
+
+  &,
+  &>table {
+    border: 0;
+    overflow: hidden;
+  }
+
+  &>table {
+    &>tbody {
+      &>tr {
+        .ui-widget-content {
+          border-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.fc-body {
+  border: 0;
+}
+
+.fc-icon {
+  font-family: $body-font-family;
+  font-size: $font-size-base;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  line-height: 35px;
+
+  &:hover {
+    color: theme-color("primary");
+  }
+}
+
+.fc-button {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+
+  &:focus,
+  &:active {
+    outline: 0;
+  }
+}
+
+
+// Main Calendar
+
+.card-calendar {
+  z-index: 0;
+
+  table,
+  td,
+  th {
+    border-color: lighten($gray-200, 2%) !important;
+  }
+
+  .fc-toolbar {
+    height: 250px;
+    background-color: $white;
+    border-radius: rounded('sm') rounded('sm') 0 0;
+    position: relative;
+    margin-bottom: -2px;
+    z-index: 2;
+
+    @media screen and (max-width: 600px) {
+      height: 135px;
+    }
+  }
+
+  .fc-day-number {
+    padding: .5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+
+    @include media-breakpoint-up(sm) {
+      font-size: headings('body-2', 'size');
+      font-weight: $font-weight-bold;
+      color: lighten($body-color, 10%);
+    }
+  }
+
+  .fc-day-header {
+    text-align: left;
+  }
+}
+
+// Calendar used inside a card
+
+.card-calendar {
+  .card-header {
+    border-bottom: 0;
+  }
+
+  table {
+    background: transparent;
+
+    tr {
+      &>td {
+        &:first-child {
+          border-left-width: 0;
+        }
+
+        &:last-child {
+          border-right-width: 0;
+        }
+      }
+    }
+  }
+}
+
+// Widget
+
+.widget-calendar {
+  position: relative;
+  z-index: 0;
+
+  .fc .fc-daygrid-day-number {
+    color: $gray-600;
+    font-weight: $font-weight-bold;
+
+    &:hover {
+      color: unset !important;
+    }
+  }
+
+  td,
+  th {
+    border-color: transparent;
+    text-align: center;
+  }
+
+  .fc-toolbar {
+    margin-top: 1.25rem;
+
+    h2 {
+      font-size: $font-size-base;
+    }
+  }
+
+  .fc-day-number {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .fc {
+    table {
+      font-size: headings('body-2','size');
+    }
+  }
+}

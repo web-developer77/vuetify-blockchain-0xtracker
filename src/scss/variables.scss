@@ -1,0 +1,20 @@
+// Here we change the inside variables of Vuetify
+// The Argon Design variables are located in "src/assets/scss/argon"
+
+@import "variables/typography";
+@import "variables/icons";
+@import "variables/list-item";
+@import "variables/forms";
+@import "variables/buttons";
+@import "variables/card";
+@import "variables/light-theme";
+@import "variables/border-radius";
+@import "variables/alerts";
+@import "variables/timeline";
+@import "variables/switch";
+@import "variables/pagination";
+@import "variables/sliders";
+
+$shadow-key-umbra-opacity: rgba(#5e72e4, 0.2);
+$shadow-key-penumbra-opacity: rgba(#5e72e4, 0.14);
+$shadow-key-ambient-opacity: rgba(#5e72e4, 0.12);

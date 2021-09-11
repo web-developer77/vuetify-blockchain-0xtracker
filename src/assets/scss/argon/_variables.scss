@@ -1,0 +1,223 @@
+$white: #fff !default;
+$gray-100: #f6f9fc !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #8898aa !default; // Line footer color
+$gray-700: #525f7f !default; // Line p color
+$gray-800: #32325d !default; // Line heading color
+$gray-900: #212529 !default;
+$black: #000 !default;
+$dark: $gray-900 !default;
+
+$body-color: #525f7f !default;
+$body-bg: #f8f9fe !default;
+$text-muted: $gray-600 !default;
+$font-size-base: 1rem !default;
+$link-hover-color: #233dd2 !default;
+$anchor-white-hover-color: #d9d9d9 !default;
+
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "default": #172b4d,
+  "primary": #5e72e4,
+  "warning": #fb6340,
+  "danger": #f5365c,
+  "info": #11cdef,
+  "success": #2dce89,
+  "secondary": #f7fafc,
+  "neutral": $white,
+), $theme-colors);
+
+$colors-simple: () !default;
+$colors-simple: map-merge((
+  "blue": #5e72e4,
+  "indigo": #5603ad,
+  "purple": #8965e0,
+  "pink": #f3a4b5,
+  "red": #f5365c,
+  "orange": #fb6340,
+  "yellow": #ffd600,
+  "green": #2dce89,
+  "teal": #11cdef,
+  "cyan": #2bffc6,
+  "white": $white,
+  "gray": $gray-600,
+  "light": $gray-400,
+  "lighter": $gray-200,
+  "gray-dark": $gray-800
+), $colors-simple);
+
+$bg-gradient-variant: () !default;
+$bg-gradient-variant: map-merge((
+  "default": (map-get($theme-colors, "default"), #1a174d),
+  "primary": (map-get($theme-colors, "primary"), #825ee4),
+  "warning": (map-get($theme-colors, "warning"), #fbb140),
+  "danger": (map-get($theme-colors, "danger"), #f56036),
+  "success": (map-get($theme-colors, "success"), #2dcecc),
+  "info": (map-get($theme-colors, "info"), #1171ef),
+  "secondary": (map-get($theme-colors, "secondary"), #f7f8fc),
+  "purple": (map-get($colors-simple, "purple"), #bc65e0),
+  "yellow": (map-get($colors-simple, "yellow"), #beff00),
+  "neutral": (map-get($theme-colors, "white"), $white)
+), $bg-gradient-variant);
+
+// Badge
+$badge-font-size: .65rem !default;
+
+// Sweet alert
+
+$swal2-width: 30em;
+$swal2-padding: 1.5rem;
+$swal2-title-font-size: 1.5rem;
+$swal2-content-font-size: .875rem;
+
+// Alerts
+$snackbar-shadow: 0 3px 10px rgb(0, 0, 0, .15) !default;
+
+// Header Auth
+$header-auth-pt: 6rem !default;
+$header-auth-pb: 8rem !default;
+
+// Separators
+$separator-height: 150px !default;
+$separator-skew-height: 60px !default; 
+
+// Letter Spacing
+$letter-spacing: () !default;
+$letter-spacing: map-merge((
+  "0": unset,
+  "1": .0625rem,
+  "2": .125rem,
+), $letter-spacing);
+
+// Headings
+$headings-display-typo: () !default;
+$headings-display-typo: map-merge((
+  "1": 3.3rem,
+  "2": 2.75rem,
+  "3": 2.1875rem,
+  "4": 1.6275rem,
+), $headings-display-typo);
+
+// Utilities Vars
+$width: () !default;
+$width: map-merge((
+  "60": 60%,
+  "70": 70%
+), $width);
+
+$opacity: () !default;
+$opacity: map-merge((
+  "1": .1,
+  "2": .2,
+  "3": .3,
+  "4": .4,
+  "5": .5,
+  "6": .6,
+  "7": .7,
+  "8": .8,
+  "9": .9,
+),$opacity);
+
+$mb-30: 30px !default;
+
+// Typo 
+$heading-font-size: .95rem !default;
+$heading-ls: .025em !default;
+$heading-title-font-size: 1.375rem !default;
+$lead-font-size: 1.25rem !default;
+
+// Table
+$thead-th-p: .75rem !default;
+$thead-th-font-size: .65rem !default;
+$thead-th-ls: 1px !default;
+$table-border-dark-color: #1f3a68 !default;
+$table-bg-dark: #1c345d !default;
+$table-color-dark: #4d7bca !default;
+$table-sortable-icon-ml: 8px !default;
+
+// Progress
+$progress-shadow: inset 0 1px 2px rgb(0, 0, 0, .1) !default;
+
+// Icons
+
+$icon-size-normal: 3rem !default;
+$icon-size-xl: 5rem !default;
+$icon-size-lg: 4rem !default;
+$icon-size-sm: 2rem !default;
+$icon-size-xs: 1.25rem !default;
+
+// Line Height
+$line-height-base: 1.5;
+$line-height-md: 1.6;
+$line-height-lg: 1.7;
+
+// Buttons
+$btn-shadow: 0 4px 6px rgb(50, 50, 93, .11), 0 1px 3px rgb($black, .08);
+$btn-shadow-hover: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba($black, 8%);
+$btn-hover-raised: -1px !default;
+$btn-outline-secondary: #4385b1 !default;
+$btn-ls: .025em !default;
+$btn-toggle-active-bg: #d2e3ee !default;
+
+// Card
+$card-box-shadow: 0 0 1rem 0 rgb(94, 114, 228, .25) !default;
+$card-stats-padding: 1rem 1.5rem !default;
+$card-padding: 1.5rem !default;
+$card-header-padding: 1.25rem 1.5rem !default;
+$card-border-with-box-shadow: rgb(0 0 0 / 10%) 0 0 0 1px, rgb(0 0 0 / 10%) 0 4px 16px;
+$card-dropdown-box-shadow: 0 50px 100px rgb(94, 114, 228, .1), 0 15px 35px rgb(94, 114, 228, .15), 0 5px 15px rgb(0, 0, 0, .1);
+$card-datepicker-icon-size: 12px !default;
+
+// Fonts
+$font-weight-bold: 600 !default;
+
+// Checkbox
+$checkbox-font-size: 1rem !default;
+
+// Transitions
+$transition-general: all .15s ease;
+$transition-cubic-bezier: all .15s cubic-bezier(.68, -.55, .265, 1.55);
+
+// Forms 
+$search-input-focus-width: 380px !default;
+$search-input-width: 291px !default;
+$input-alternative-box-shadow: 0 1px 3px rgba(50,50,93, .15), 0 1px 0 rgba($black, .02);
+$input-placeholder-font-size: 14px !default;
+$input-icon-padding-x: .75rem !default;
+$input-font-size: 14px !default;
+$input-dark-bg: rgba(23, 43, 77, .9) !default;
+$input-alternative-focused-box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08) !default;
+$input-focused-box-shadow: 0 3px 9px rgb(50 50 9 / 0%), 3px 4px 8px rgb(94 114 228 / 10%) !default;
+
+// Avatar
+$avatar-group-ml: .9rem !default;
+
+// Media Comment
+$media-comment-text-p: 1rem 1.25rem 1rem 2.5rem !default;
+$media-comment-avatar-m: 1rem !default;
+
+// 
+// Vuetify Vars
+// 
+
+// Drawer
+$v-navigation-drawer-box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15) !default;
+$v-navigation-drawer-brand-height: 78px !default;
+$v-icon-drawer-min-width: 25px !default;
+$v-list-item-icon-mr: 7px !default;
+$v-list-item-mini-font-size: 0.8125rem !default;
+$v-list-item-title-color: rgba(0, 0, 0, .6) !default;
+$v-list-item-title-hover-color: rgba(0, 0, 0, .7) !default;
+$v-main-margin-left: 250px !default;
+$v-main-mini-margin-left: 56px !default;
+
+$drawer-toggler-line-height: 2px !default; 
+$drawer-toggler-line-bg: rgba($black, .6) !default;
+$drawer-toggler-line-mb: 3px !default;
+$drawer-toggler-line-width: 18px !default;
+$drawer-toggler-line-active-width: 13px !default;
+$drawer-toggler-line-active-tranform: 5px !default;
